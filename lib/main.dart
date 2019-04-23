@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loja_virtual/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,30 +7,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: "Flutter's Clothing",
       theme: new ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.blue,
+        primaryColor: Color.fromARGB(255, 4, 125, 141),
       ),
-      home: Home(),
-    );
-  }
-}
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Loja Virtual'),
-        centerTitle: true,
-      ),
-      body: Center(
-          child: Text('Hello!')
-      ),
+      home: HomeScreen(),
     );
   }
 }
