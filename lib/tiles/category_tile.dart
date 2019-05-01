@@ -20,6 +20,7 @@ class CategoryTile extends StatelessWidget {
       onTap: ()
       {
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CategoryScreen(snapshot)));
+        print(snapshot.documentID);
       },
     );
   }
